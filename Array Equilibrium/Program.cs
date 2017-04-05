@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Array_Equilibrium
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
+            var A = new int[] { -5, 11, -4, 5, 1, -6, 12, 6 };
+            var result = Solution.SolutionMethod(A);
+            Console.Write(result);
+            Console.ReadLine();
         }
     }
 }
