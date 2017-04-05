@@ -7,15 +7,26 @@ namespace ArrayEquilibriumTest
     public class SolutionTest
     {
         [TestMethod]
-        public void SolutionTestMethod()
+        public void SolutionTestMethod_EquilibriumPoint_Found()
         {
             //Given
-            var given = new[] { -5, 11, -4, 5, 1, -6, 12, 6 };
+            var given = new[] { -1, 3, -4, 5, 1, -6, 2, 1 };
+            //Processing
+            var actual = Solution.SolutionMethod(given);
+            //Expected
+            const int expected = 1;
+            Assert.AreEqual(expected,actual);
+        }
+        [TestMethod]
+        public void SolutionTestMethod_EquilibriumPoint_Not_Found()
+        {
+            //Given
+            var given = new[] { 1, 3, -4, 5, 1, -6, 2, 1 };
             //Processing
             var actual = Solution.SolutionMethod(given);
             //Expected
             const int expected = -1;
-            Assert.AreEqual(expected,actual);
+            Assert.AreEqual(expected, actual);
         }
     }
 }
